@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %} {% endblock %}
+
+{% block body %}
+ <header> 
+ <nav class="navbar" style="background-color: #1673D0;">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="{{ url_for('static', filename='logo.svg') }}" width="60" height="48">
+      </a>
+    </div>
+  </nav>
+ </header>
+
+ <div class="container" style="padding: 0 80px;">
+    <div class=" row justify-content-lg-center container-search" style="display:flex; justify-content: flex-end;">
+        <form action="/" method="POST"> 
+        <input type="text" name="request" id="request" class="form-control" placeholder="введите запрос" style="min-width: 8px;">
+        <input type="submit" class="btn btn-primary"></input>
+        </form>
+        </div>
+        </div>
+{% endblock %}
