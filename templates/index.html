@@ -3,22 +3,41 @@
 {% block head %} {% endblock %}
 
 {% block body %}
- <header> 
- <nav class="navbar" style="background-color: #1673D0;">
-    <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="{{ url_for('static', filename='logo.svg') }}" width="60" height="48">
-      </a>
-    </div>
+<header>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">
+      <img src="{{ url_for('static', filename='logo.svg') }}" alt="">
+    </label>
+    <ul>
+      <li><a class="active" href="#">поиск</a></li>
+      <li><a href="#">о нас</a></li>
+      <li><a href="#">контакты</a></li>
+    </ul>
   </nav>
- </header>
+  <section></section>
+</header>
 
- <div class="container" style="padding: 0 80px;">
-    <div class=" row justify-content-lg-center container-search" style="display:flex; justify-content: flex-end;">
-        <form action="/" method="POST"> 
-        <input type="text" name="request" id="request" class="form-control" placeholder="введите запрос" style="min-width: 8px;">
-        <input type="submit" class="btn btn-primary"></input>
-        </form>
-        </div>
-        </div>
+<div class="BoxContainer">
+  <table class="elementsContainer">
+    <tr>
+      <td>
+        <input type="text" placeholder="поиск" class="search">
+      </td>
+      <td>
+        <a href="#">
+          <i class="material-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </i>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 {% endblock %}
