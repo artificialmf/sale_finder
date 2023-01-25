@@ -178,6 +178,7 @@
 .title {
   width: 100%;
   height: 50%;
+
 }
 
 table {
@@ -187,9 +188,21 @@ table {
 
 .product-desc {
   padding-left: 2%;
-
+  display: flex;
 }
 
 .wrapper {
   min-width: none;
+}
+
+.price {
+  margin-left: auto;
+}
+
+.buy {
+  margin-left: auto;
+}
+
+.price-buy {
+  margin-top: auto;
 }
