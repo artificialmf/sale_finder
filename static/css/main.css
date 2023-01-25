@@ -165,13 +165,13 @@
   padding: 3%;
 }
 
-.img-container {
-  
+ .img-container {
+  width: 150px;  
 
 }
 .product-image {
-  height: 150px;
-  width: auto;
+  height: auto;
+  width: 150px;
   padding-right: 2px;
   
 }
@@ -189,6 +189,7 @@ table {
 .product-desc {
   padding-left: 2%;
   display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -200,9 +201,21 @@ table {
 }
 
 .buy {
-  margin-left: auto;
+  border: 1px solid #1673D0;
+  background-color: #1673D0;
+  border-radius: 5px;
+  font-size: 15px;
+  height: 60px;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
 }
+.btn-text {
+  color: white
+}
+
 
 .price-buy {
   margin-top: auto;
+  margin-left: auto;
 }

@@ -8,7 +8,7 @@
       <i class="fas fa-bars"></i>
     </label>
     <label class="logo">
-      <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="">
+      <img src="{{ url_for('static', filename='svg/logo1.svg') }}" alt="">
     </label>
     <ul>
       <li><a class="active" href="#">поиск</a></li>
@@ -21,7 +21,7 @@
 
 <div class="BoxContainer">
   <table class="elementsContainer">
-    <form action="/" method="POST">
+    <form action="/" method="POST" autocomplete="off">
     <tr>
       <td>
         <input type="text" placeholder="поиск" class="search" name="req" id="req">
@@ -67,11 +67,13 @@
                 </div>
                 <div class="price-buy">
                 <div class="price">
+                  <h3>
                   {{ product['price'] }} ₽
+                  </h3>
                 </div>
                 <button class="buy">
-                  <a href="citilink.ru">
-                    купить
+                  <a href="citilink.ru" class="btn-text">
+                    перейти на сайт продавца
                   </a>
                 </button>
                 </div>
