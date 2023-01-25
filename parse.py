@@ -92,6 +92,7 @@ def get_info(sr):
         img = product.find_element(By.CLASS_NAME, 'catalog__item-img-link').find_element(By.CLASS_NAME, 'lazyload').get_attribute('src')
         response_.append({'title': title, 'price': price, 'rating': rating, 'img': img, 'store':'restore'})
 
+    driver.quit()
     return response_
 
 for i in get_info('iphone'):

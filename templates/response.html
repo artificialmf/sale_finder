@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<header>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">
+      <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="">
+    </label>
+    <ul>
+      <li><a class="active" href="#">поиск</a></li>
+      <li><a href="#">о нас</a></li>
+      <li><a href="#">контакты</a></li>
+    </ul>
+  </nav>
+  <section></section>
+</header>
+
+<div class="BoxContainer">
+  <table class="elementsContainer">
+    <tr>
+      <td>
+        <input type="text" placeholder="поиск" class="search">
+      </td>
+      <td>
+        <a href="#">
+          <i class="material-icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </i>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="response-list">
+    <ul style="list-style-type:none;">
+        {% for product in products %}
+        <li>
+          <div class="product-card">
+            <table>
+            <tr class="wrapper">
+              <td class="img-container">
+                <img src="{{ product['img'] }}" class="product-image">  
+              </td>
+              <td class="product-desc">
+                <div class="title">
+                <h4>
+                  {{ product['title'] }}
+                </h4>
+                </div>
+                <div class="other">
+                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi scelerisque eu ultrices vitae auctor. Quam adipiscing vitae proin sagittis nisl rhoncus mattis.</p> -->
+                </div>
+                <div class="rating">
+                  <p>{{ product['rating'] }}</p>
+                </div>
+                <div class="price">
+                  {{ product['price'] }} ₽
+                </div>
+                <button class="buy">
+                  <a href="citilink.ru">
+                    купить
+                  </a>
+                </button>
+                <p>взято с {{ product['store'] }}</p>
+              </td>
+          </tr> 
+          </table> 
+          </div>
+        </li>
+        <br>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

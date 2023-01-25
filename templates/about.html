@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %} {% endblock %}
+
+
+{% block body %}
+<header>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">
+        <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="">
+      </label>
+      <ul>
+        <li><a class="active" href="#">поиск</a></li>
+        <li><a href="#">о нас</a></li>
+        <li><a href="#">контакты</a></li>
+      </ul>
+    </nav>
+    <section></section>
+</header>
+
+<section class="intro">
+    <div class="text-intro">
+        <div class="title">
+            <h1>
+                Получать скидки ещё никогда не было так просто
+            </h1>
+        </div>
+        <div class="details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quibusdam harum maiores praesentium nisi, officia sint magnam consequuntur nemo eius libero ratione officiis.
+        </div>
+        <div class="buttons">
+            <a href="#" class="start-button">начать</a>
+        </div>
+    </div>
+
+    <div class="image-side">
+
+    </div>
+</section>
+{% endblock %}
